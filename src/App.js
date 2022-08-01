@@ -4,6 +4,11 @@ import './components/Form.css';
 import Card from './components/Card';
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.onInputChange = this.onInputChange.bind(this);
+  }
+
   state = {
     cardName: '',
     cardDescription: '',
@@ -13,6 +18,12 @@ class App extends React.Component {
     cardImage: '',
     cardRare: 'normal',
     cardTrunfo: false,
+  }
+
+  onInputChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
   }
 
   render() {
@@ -28,7 +39,7 @@ class App extends React.Component {
       hasTrunfo } = this.state;
 
     return (
-      <div>
+      <div className="render-box">
         <h1>Tryunfo</h1>
         <Form
           classname="form-box"

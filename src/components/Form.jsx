@@ -21,7 +21,7 @@ class Form extends React.Component {
         <div>
           <input
             data-testid="name-input"
-            name="name"
+            name="cardName"
             type="text"
             value={ cardName }
             onChange={ onInputChange }
@@ -30,8 +30,7 @@ class Form extends React.Component {
         <div>
           <textarea
             data-testid="description-input"
-            name="Desc"
-            id=""
+            name="cardDescription"
             cols="30"
             rows="10"
             value={ cardDescription }
@@ -40,6 +39,7 @@ class Form extends React.Component {
         </div>
         <div>
           <input
+            name="cardAttr1"
             data-testid="attr1-input"
             type="number"
             value={ cardAttr1 }
@@ -48,6 +48,7 @@ class Form extends React.Component {
         </div>
         <div>
           <input
+            name="cardAttr2"
             data-testid="attr2-input"
             type="number"
             value={ cardAttr2 }
@@ -56,6 +57,7 @@ class Form extends React.Component {
         </div>
         <div>
           <input
+            name="cardAttr3"
             data-testid="attr3-input"
             type="number"
             value={ cardAttr3 }
@@ -64,6 +66,7 @@ class Form extends React.Component {
         </div>
         <div>
           <input
+            name="cardImage"
             data-testid="image-input"
             type="text"
             placeholder="Insira imagem"
@@ -73,8 +76,7 @@ class Form extends React.Component {
         </div>
         <div>
           <select
-            name=""
-            id=""
+            name="cardRare"
             data-testid="rare-input"
             value={ cardRare }
             onChange={ onInputChange }
@@ -87,6 +89,7 @@ class Form extends React.Component {
         <div>
           { hasTrunfo }
           <input
+            name="cardTrunfo"
             type="checkbox"
             data-testid="trunfo-input"
             checked={ cardTrunfo }
