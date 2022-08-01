@@ -1,8 +1,5 @@
 .form-box {
   border: solid black 1px;
-  width: 500px;
   height: 500px;
-  display: flexbox;
-  flex-direction: column;
-  align-items: center;
+  width: 500px;
 }
