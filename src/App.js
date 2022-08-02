@@ -15,7 +15,6 @@ class App extends React.Component {
     cardTrunfo: false,
     isSaveButtonDisabled: true,
     hasTrunfo: false,
-    newCard: [],
   }
 
   isSaveButtonDisabled = () => {
