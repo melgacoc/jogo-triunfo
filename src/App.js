@@ -15,7 +15,6 @@ class App extends React.Component {
     cardTrunfo: false,
     isSaveButtonDisabled: true,
     hasTrunfo: false,
-    newCard: [],
   }
 
   isSaveButtonDisabled = () => {
@@ -97,8 +96,6 @@ class App extends React.Component {
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
           hasTrunfo={ hasTrunfo }
-        />
-        <ul
         />
       </div>
     );
