@@ -13,11 +13,12 @@ class App extends React.Component {
     cardImage: '',
     cardRare: 'normal',
     cardTrunfo: false,
-    isSaveButtonDisable: true,
+    isSaveButtonDisabled: true,
     hasTrunfo: false,
+    newCard: [],
   }
 
-  isSaveButtonDisable = () => {
+  isSaveButtonDisabled = () => {
     const {
       cardName,
       cardImage,
@@ -40,7 +41,7 @@ class App extends React.Component {
     const buttonIsDisable = verifyStrings || verifyAttrs || verifyTotalAttr;
 
     this.setState({
-      isSaveButtonDisable: buttonIsDisable,
+      isSaveButtonDisabled: buttonIsDisable,
     });
   }
 
@@ -48,7 +49,7 @@ class App extends React.Component {
     this.setState({
       [event.target.name]: event.target.value,
     }, () => {
-      this.isSaveButtonDisable();
+      this.isSaveButtonDisabled();
     });
   }
 
@@ -67,7 +68,7 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
       hasTrunfo,
-      isSaveButtonDisable } = this.state;
+      isSaveButtonDisabled } = this.state;
 
     return (
       <div className="render-box">
@@ -84,7 +85,7 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
           hasTrunfo={ hasTrunfo }
           onInputChange={ this.onInputChange }
-          isSaveButtonDisable={ isSaveButtonDisable }
+          isSaveButtonDisable={ isSaveButtonDisabled }
         />
         <Card
           cardName={ cardName }
@@ -96,6 +97,8 @@ class App extends React.Component {
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
           hasTrunfo={ hasTrunfo }
+        />
+        <ul
         />
       </div>
     );
